@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Amir Football ⚽</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #07111f;
+      color: white;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0b1f38, #123d70);
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #c9d8e8;
+      font-size: 18px;
+    }
+
+    nav {
+      background: #050b14;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      background:
+        radial-gradient(circle at center, #174d80 0%, #07111f 65%);
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero span {
+      color: #ffd700;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #d4dce5;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #ffd700;
+      color: #111;
+      padding: 13px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 55px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    .player {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .number {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #ffffff, #d9e1ea);
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 120px;
+      font-weight: bold;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.35);
+    }
+
+    .info {
+      max-width: 500px;
+      line-height: 2;
+      font-size: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #0d1c2f;
+      border: 1px solid #1c3858;
+      padding: 25px;
+      border-radius: 18px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #ffd700;
+    }
+
+    .card .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #b8c5d3;
+      line-height: 1.7;
+    }
+
+    .video-box {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .video-box video {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 18px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #0b1829;
+      border-radius: 20px;
+      margin-bottom: 40px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #03070d;
+      color: #9eabb9;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      nav a {
+        margin: 0 5px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>⚽ Amir Football</h1>
+    <p>به دنیای فوتبال امیر خوش آمدید</p>
+  </header>
+
+  <nav>
+    <a href="#home">خانه</a>
+    <a href="#player">بازیکن</a>
+    <a href="#achievements">افتخارات</a>
+    <a href="#contact">ارتباط</a>
+  </nav>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div>
+        <h2>AMIR <span>#7</span></h2>
+        <p>رویای بزرگ، تلاش بیشتر، گل‌های بیشتر! 🔥</p>
+        <a class="button" href="#player">مشاهده پروفایل</a>
+      </div>
+    </section>
+
+    <section id="player">
+      <h2>👑 پروفایل بازیکن</h2>
+
+      <div class="player">
+
+        <div class="number">7</div>
+
+        <div class="info">
+          <p><strong>نام:</strong> Amir</p>
+          <p><strong>شماره:</strong> 7</p>
+          <p><strong>پست:</strong> حمله ⚡</p>
+          <p><strong>سبک بازی:</strong> سرعتی و هجومی</p>
+          <p><strong>هدف:</strong> تبدیل شدن به یک ستاره بزرگ فوتبال 🌟</p>
+          <p><strong>سبک فوتبال:</strong> یک بازیکن فوق حرفه‌ای</p>
+          <p><strong>کشور:</strong> ایران 🇮🇷</p>
+          <p><strong>تیم:</strong> رئال مادرید ⚽</p>
+          <p><strong>تاریخ تولد:</strong> ۱۳۹۳/شهریور/۱۲</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="achievements">
+      <h2>🏆 افتخارات</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">⚽</div>
+          <h3>گل‌های زیاد</h3>
+          <p>حمله با علاقه زیاد به گل‌زنی.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🏆</div>
+          <h3>قهرمانی</h3>
+          <p>هدف همیشه رسیدن به جام‌های بزرگ است.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔥</div>
+          <h3>تلاش</h3>
+          <p>هر روز تمرین بیشتر برای بهتر شدن.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🌟</div>
+          <h3>رویای ستاره شدن</h3>
+          <p>یک هدف بزرگ برای آینده.</p>
+        </div>
+
+      </div>
+
+      <div class="video-box">
+        <h3>🎥 آموزش دریبل</h3>
+
+        <video controls>
+          <source src="dribble.mp4" type="video/mp4">
+          مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+        </video>
+      </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>📣 ارتباط با Amir</h2>
+      <p>Amir Football 2026</p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Amir Football | ساخته شده با ❤️ و ⚽
+  </footer>
+
+</body>
+</html
