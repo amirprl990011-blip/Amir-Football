@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,33 +104,132 @@
       font-size: 30px;
     }
 
-    .player {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      align-items: center;
+    /* کارت بازیکن */
+
+    .player-section {
+      text-align: center;
     }
 
-    .number {
-      width: 220px;
-      height: 220px;
+    .player-card {
+      max-width: 380px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 25px;
+      background: linear-gradient(145deg, #123d70, #07111f);
+      border: 2px solid #ffd700;
+      box-shadow: 0 0 35px rgba(255, 215, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .player-card::before {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: rgba(255, 215, 0, 0.08);
       border-radius: 50%;
-      background: linear-gradient(145deg, #ffffff, #d9e1ea);
-      color: #111;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 120px;
-      font-weight: bold;
-      box-shadow: 0 0 40px rgba(255, 215, 0, 0.35);
+      top: -100px;
+      right: -80px;
     }
 
-    .info {
-      max-width: 500px;
-      line-height: 2;
-      font-size: 18px;
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
     }
+
+    .country {
+      color: #d4dce5;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .card-top h3 {
+      font-size: 32px;
+      color: #ffd700;
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .rating strong {
+      font-size: 38px;
+      color: white;
+    }
+
+    .rating span {
+      color: #ffd700;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .big-number {
+      font-size: 150px;
+      font-weight: bold;
+      line-height: 1;
+      color: white;
+      text-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+      margin: 15px 0;
+    }
+
+    .player-info {
+      text-align: right;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      border-radius: 15px;
+    }
+
+    .player-info p {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 0;
+      color: white;
+    }
+
+    .player-info span {
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .stats div {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 10px 4px;
+    }
+
+    .stats strong {
+      display: block;
+      color: #ffd700;
+      font-size: 22px;
+    }
+
+    .stats span {
+      font-size: 11px;
+      color: #d4dce5;
+    }
+
+    .card-footer {
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255, 215, 0, 0.3);
+      color: #ffd700;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* افتخارات */
 
     .cards {
       display: grid;
@@ -165,15 +265,28 @@
       line-height: 1.7;
     }
 
+    /* ویدیو */
+
     .video-box {
+      margin-top: 35px;
+      background: #0d1c2f;
+      border: 1px solid #1c3858;
+      padding: 25px;
+      border-radius: 20px;
       text-align: center;
-      margin-top: 30px;
     }
 
-    .video-box video {
+    .video-box h3 {
+      color: #ffd700;
+      margin-bottom: 15px;
+      font-size: 25px;
+    }
+
+    video {
       width: 100%;
       max-width: 700px;
       border-radius: 18px;
+      margin-top: 10px;
     }
 
     .contact {
@@ -191,6 +304,7 @@
     }
 
     @media (max-width: 600px) {
+
       header h1 {
         font-size: 32px;
       }
@@ -203,108 +317,378 @@
         margin: 0 5px;
         font-size: 14px;
       }
+
+      .player-card {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .big-number {
+        font-size: 120px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
     }
   </style>
+
 </head>
 
 <body>
 
+  <!-- هدر -->
+
   <header>
+
     <h1>⚽ Amir Football</h1>
-    <p>به دنیای فوتبال امیر خوش آمدید</p>
+
+    <p>
+      به دنیای فوتبال امیر خوش آمدید
+    </p>
+
   </header>
 
+
+  <!-- منو -->
+
   <nav>
+
     <a href="#home">خانه</a>
+
     <a href="#player">بازیکن</a>
+
     <a href="#achievements">افتخارات</a>
+
+    <a href="#training">آموزش</a>
+
     <a href="#contact">ارتباط</a>
+
   </nav>
+
 
   <main>
 
+
+    <!-- صفحه اصلی -->
+
     <section class="hero" id="home">
+
       <div>
-        <h2>AMIR <span>#7</span></h2>
-        <p>رویای بزرگ، تلاش بیشتر، گل‌های بیشتر! 🔥</p>
-        <a class="button" href="#player">مشاهده پروفایل</a>
+
+        <h2>
+          AMIR <span>#7</span>
+        </h2>
+
+        <p>
+          رویای بزرگ، تلاش بیشتر، گل‌های بیشتر! 🔥
+        </p>
+
+        <a class="button" href="#player">
+          مشاهده پروفایل
+        </a>
+
       </div>
+
     </section>
 
-    <section id="player">
-      <h2>👑 پروفایل بازیکن</h2>
 
-      <div class="player">
+    <!-- کارت بازیکن -->
 
-        <div class="number">7</div>
+    <section id="player" class="player-section">
 
-        <div class="info">
-          <p><strong>نام:</strong> Amir</p>
-          <p><strong>شماره:</strong> 7</p>
-          <p><strong>پست:</strong> حمله ⚡</p>
-          <p><strong>سبک بازی:</strong> سرعتی و هجومی</p>
-          <p><strong>هدف:</strong> تبدیل شدن به یک ستاره بزرگ فوتبال 🌟</p>
-          <p><strong>سبک فوتبال:</strong> یک بازیکن فوق حرفه‌ای</p>
-          <p><strong>کشور:</strong> ایران 🇮🇷</p>
-          <p><strong>تیم:</strong> رئال مادرید ⚽</p>
-          <p><strong>تاریخ تولد:</strong> ۱۳۹۳/شهریور/۱۲</p>
+      <h2>
+        👑 کارت بازیکن
+      </h2>
+
+
+      <div class="player-card">
+
+
+        <div class="card-top">
+
+          <div>
+
+            <p class="country">
+              🇮🇷 IRAN
+            </p>
+
+            <h3>
+              AMIR
+            </h3>
+
+          </div>
+
+
+          <div class="rating">
+
+            <strong>
+              100
+            </strong>
+
+            <span>
+              OVR
+            </span>
+
+          </div>
+
         </div>
 
+
+        <div class="big-number">
+          7
+        </div>
+
+
+        <div class="player-info">
+
+          <p>
+            <span>⚡ پست</span>
+            مهاجم
+          </p>
+
+          <p>
+            <span>🏟️ تیم</span>
+            رئال مادرید
+          </p>
+
+          <p>
+            <span>🔥 سبک</span>
+            فوق حرفه‌ای
+          </p>
+
+          <p>
+            <span>🌟 ویژگی</span>
+            سرعتی و هجومی
+          </p>
+
+          <p>
+            <span>🎂 تولد</span>
+            ۱۳۹۳/۰۶/۱۲
+          </p>
+
+        </div>
+
+
+        <!-- مهارت ها -->
+
+        <div class="stats">
+
+
+          <div>
+
+            <strong>
+              100
+            </strong>
+
+            <span>
+              سرعت
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <strong>
+              100
+            </strong>
+
+            <span>
+              شوت
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <strong>
+              100
+            </strong>
+
+            <span>
+              دریبل
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <strong>
+              100
+            </strong>
+
+            <span>
+              پاس
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="card-footer">
+
+          ⭐ AMIR FOOTBALL ⭐
+
+        </div>
+
+
       </div>
+
     </section>
 
+
+    <!-- افتخارات -->
+
     <section id="achievements">
-      <h2>🏆 افتخارات</h2>
+
+      <h2>
+        🏆 افتخارات
+      </h2>
+
 
       <div class="cards">
 
-        <div class="card">
-          <div class="icon">⚽</div>
-          <h3>گل‌های زیاد</h3>
-          <p>حمله با علاقه زیاد به گل‌زنی.</p>
-        </div>
 
         <div class="card">
-          <div class="icon">🏆</div>
-          <h3>قهرمانی</h3>
-          <p>هدف همیشه رسیدن به جام‌های بزرگ است.</p>
+
+          <div class="icon">
+            ⚽
+          </div>
+
+          <h3>
+            گل‌های زیاد
+          </h3>
+
+          <p>
+            حمله با علاقه زیاد به گل‌زنی.
+          </p>
+
         </div>
 
-        <div class="card">
-          <div class="icon">🔥</div>
-          <h3>تلاش</h3>
-          <p>هر روز تمرین بیشتر برای بهتر شدن.</p>
-        </div>
 
         <div class="card">
-          <div class="icon">🌟</div>
-          <h3>رویای ستاره شدن</h3>
-          <p>یک هدف بزرگ برای آینده.</p>
+
+          <div class="icon">
+            🏆
+          </div>
+
+          <h3>
+            قهرمانی
+          </h3>
+
+          <p>
+            هدف همیشه رسیدن به جام‌های بزرگ است.
+          </p>
+
         </div>
+
+
+        <div class="card">
+
+          <div class="icon">
+            🔥
+          </div>
+
+          <h3>
+            تلاش
+          </h3>
+
+          <p>
+            هر روز تمرین بیشتر برای بهتر شدن.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">
+            🌟
+          </div>
+
+          <h3>
+            رویای ستاره شدن
+          </h3>
+
+          <p>
+            یک هدف بزرگ برای آینده.
+          </p>
+
+        </div>
+
 
       </div>
+
+    </section>
+
+
+    <!-- آموزش دریبل -->
+
+    <section id="training">
+
+      <h2>
+        🎥 آموزش فوتبال
+      </h2>
+
 
       <div class="video-box">
-        <h3>🎥 آموزش دریبل</h3>
+
+        <h3>
+          ⚡ آموزش دریبل
+        </h3>
+
+        <p>
+          هر روز اینجا دریبل‌های جدید یاد می‌گیریم! ⚽🔥
+        </p>
+
 
         <video controls>
+
           <source src="dribble.mp4" type="video/mp4">
+
           مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+
         </video>
+
+
       </div>
 
     </section>
 
+
+    <!-- ارتباط -->
+
     <section id="contact" class="contact">
-      <h2>📣 ارتباط با Amir</h2>
-      <p>Amir Football 2026</p>
+
+      <h2>
+        📣 ارتباط با Amir
+      </h2>
+
+      <p>
+        Amir Football 2026 ⚽
+      </p>
+
     </section>
+
 
   </main>
 
+
+  <!-- فوتر -->
+
   <footer>
+
     © 2026 Amir Football | ساخته شده با ❤️ و ⚽
+
   </footer>
 
+
 </body>
-</html
+
+  </html>
